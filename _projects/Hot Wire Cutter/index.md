@@ -34,7 +34,7 @@ Getting consistent, controllable heat meant carefully wiring the nichrome wire t
 ## Cutting in Action
 Once assembled, the cutter went straight to work shaping foam cores for my wing panel project.
  
-{% include image-gallery.html images="hotwire_cutting_web.gif" height="400" %}
+{% include image-gallery.html images="hotwire_cutting_hq.gif" height="400" %}
  
 ## The Result
 A clean NACA airfoil profile, cut directly from XPS foam. Ready to serve as the core for the wing panel's composite skin layup.
