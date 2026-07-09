@@ -48,7 +48,7 @@ Full calculations and justifications are provided in the engineering report, cur
 
 Spanwise lift distribution L'(y) was extracted from XFLR5 for both missions across a range of angles of attack. The 3D panel analysis confirmed Mission 2 governs due to the combined effect of higher speed and aggressive maneuvering. 
 
-{% include image-gallery.html images="xflr2d1.jpg, xflr5-3d-mission2.jpg" height="380" %}
+{% include image-gallery.html images="xflr1.png, xflr5-3d-mission2.jpg" height="380" %}
 <span style="font-size: 10px">Left: 2D foil analysis, NACA 2412, Mission 1 vs. Mission 2 comparison. Right: 3D wing panel analysis, Mission 2 at 25 m/s.</span>
 
 A critical units error was identified and corrected during this phase: the raw XFLR5 export was approximately 1000x too large (N/m interpreted as N/mm). After correction, an 11-point spanwise L'(y) table was generated and used as input to all downstream analyses.
