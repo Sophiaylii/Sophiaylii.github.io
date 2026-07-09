@@ -14,7 +14,7 @@ skills:
   - Wet Layup Manufacturing
   - Hot Wire Foam Cutting
   - Structural Analysis
-main-image: /images/hyperx-tsaiwu.jpg
+main-image: /cover-aero-wing.jpg
 ---
 
 ## Overview
@@ -40,7 +40,7 @@ The NACA 2412 airfoil was selected for its well-documented lift characteristics,
 ### Governing load case: 
 Mission 2 sprint: 25 m/s, 2.4g maneuver load factor (constrained by CLmax, corrected from initial 3g assumption), producing a root bending moment of 13.18 Nm.
 
-Full calculations and justifications are provided in the engineering report. 
+Full calculations and justifications are provided in the engineering report, currently in progress. 
 
 ---
 
@@ -167,6 +167,4 @@ Four significant errors were independently identified and corrected during the p
 
 ---
 
-*Full engineering report available below. Manufacturing and bend test results to follow.*
-
-[📄 Engineering Report](#) &nbsp;&nbsp; [💻 GitHub](#)
+*Full engineering report available below (in progress). Bend test results to follow.*

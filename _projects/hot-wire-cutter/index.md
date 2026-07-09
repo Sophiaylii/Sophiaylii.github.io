@@ -8,7 +8,7 @@ skills:
   - Tool and jig design
   - Fabrication tooling
   - Design thinking
-main-image: /IMG_4903.jpg
+main-image: /IMG_4903_2.jpg
 ---
 
 ## Overview
