@@ -48,12 +48,12 @@ Full calculations and justifications are provided in the engineering report, cur
 
 Spanwise lift distribution L'(y) was extracted from XFLR5 for both missions across a range of angles of attack. The 3D panel analysis confirmed Mission 2 governs due to the combined effect of higher speed and aggressive maneuvering. 
 
-{% include image-gallery.html images="xflr1.png, xflr5-3d-mission2.jpg" height="380" %}
+{% include image-gallery.html images="xflr1.png, xflr2.png" height="380" %}
 <span style="font-size: 10px">Left: 2D foil analysis, NACA 2412, Mission 1 vs. Mission 2 comparison. Right: 3D wing panel analysis, Mission 2 at 25 m/s.</span>
 
 A critical units error was identified and corrected during this phase: the raw XFLR5 export was approximately 1000x too large (N/m interpreted as N/mm). After correction, an 11-point spanwise L'(y) table was generated and used as input to all downstream analyses.
 
-{% include image-gallery.html images="images/matlab-bending-moment-1.jpg, images/matlab-bending-moment-stores.jpg" height="360" %}
+{% include image-gallery.html images="matlab1.png, matlab2.png" height="360" %}
 <span style="font-size: 10px">Bending moment vs. spanwise position, Mission 1 vs. Mission 2 without payload (left) and Mission 1 with stores vs. Mission 2 (right). Mission 2 governs at 13.18 Nm root bending moment.</span>
 
 ---
@@ -66,8 +66,8 @@ Bending stiffness (EI) was computed analytically in MATLAB using EA-weighted par
 
 This result establishes the hand-calculation baseline that all subsequent FEA models validate against.
 
-{% include image-gallery.html images="images/matlab-verification.jpg" height="400" %}
-<span style="font-size: 10px">MATLAB output confirming skin fraction (91.33% from 2D FEA validation run) and spar perimeter geometry about the neutral axis.</span>
+{% include image-gallery.html images="ei1.png, ei2.png" height="400" %}
+<span style="font-size: 10px">MATLAB output confirming skin fraction, 91.33% from 2D FEA validation run (left), and MATLAB theoretical hand calculation (right).</span>
 
 ---
 
@@ -77,8 +77,8 @@ This result establishes the hand-calculation baseline that all subsequent FEA mo
 
 A 2D thin-slice model of the airfoil cross-section was built in Abaqus with the 13.18 Nm root bending moment applied directly. Section forces were extracted and integrated separately for skin and spar elements.
 
-{% include image-gallery.html images="images/abaqus-2d-assembly.jpg, images/abaqus-sf1-2d.jpg" height="360" %}
-<span style="font-size: 10px">Left: 2D Abaqus assembly with boundary conditions. Right: SF1 (spanwise force resultant) contour plot, tension on upper surface, compression on lower.</span>
+{% include image-gallery.html images="2dfea.png" height="360" %}
+<span style="font-size: 10px">2D Abaqus SF1 (spanwise force resultant) contour plot, tension on upper surface, compression on lower.</span>
 
 Result: Skin EI fraction = 91.3% in FEA vs. 93% in MATLAB, agreement within 2%. MATLAB hand calculations validated.
 
@@ -88,10 +88,10 @@ Result: Skin EI fraction = 91.3% in FEA vs. 93% in MATLAB, agreement within 2%. 
 
 The full 3D wing panel was modeled in Abaqus using shell elements, with the spanwise lift distribution applied as an analytical field pressure load. Foam, ribs, and spar were converted to shells for HyperX compatibility while preserving mass and stiffness properties.
 
-{% include image-gallery.html images="images/abaqus-cad.jpg, images/abaqus-undeformed.jpg" height="360" %}
+{% include image-gallery.html images="cad.png, undeformed.png" height="360" %}
 <span style="font-size: 10px">Left: Fusion 360 CAD assembly showing foam sections, ribs, spar, and skin. Right: Undeformed Abaqus shell mesh, full 424mm structural panel.</span>
 
-{% include image-gallery.html images="images/abaqus-sf1-deformed.jpg, images/abaqus-rf3.jpg" height="360" %}
+{% include image-gallery.html images="sf1.png, rf3.png" height="360" %}
 <span style="font-size: 10px">Left: SF1 deformed contour, bending load path clearly visible through skin. Right: RF3 (vertical reaction force) distribution at root boundary condition.</span>
 
 A units error in the pressure load definition (N/mm entered instead of N/mm^2) was independently caught and corrected during model verification. Reaction forces had been 15-20x too high, which triggered the investigation.
@@ -107,7 +107,7 @@ A units error in the pressure load definition (N/mm entered instead of N/mm^2) w
 
 FEA-extracted shell load resultants were imported into HyperX for composite margin assessment. Structures and zones were created for all panel components, with material properties assigned from the FEM and verified against source data. Failure modes analyzed include panel buckling (biaxial, shear, interaction), composite ply strength (Max Strain, Max Stress, Tsai-Wu, Tsai-Hill, LaRC03), and isotropic strength for foam and wood components.
 
-{% include image-gallery.html images="images/hyperx-tsaiwu.jpg" height="420" %}
+{% include image-gallery.html images="tsaiwu.png" height="420" %}
 <span style="font-size: 10px">HyperX margin of safety plot, Tsai-Wu criterion across full panel. Minimum MS = 76.5 at tip zone. All zones positive.</span>
 
 **All failure modes returned positive margins of safety across the full panel:**
@@ -129,6 +129,8 @@ The panel is structurally adequate under Mission 2 design loads with significant
 ---
 
 ## Manufacturing
+
+{% include image-gallery.html images="manufacture.jpg" height="420" %}
 
 *In progress — physical test results to be added upon completion of 3-point bend test.*
 
