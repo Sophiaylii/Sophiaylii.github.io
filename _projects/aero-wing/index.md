@@ -88,10 +88,10 @@ Result: Skin EI fraction = 91.3% in FEA vs. 93% in MATLAB, agreement within 2%. 
 
 The full 3D wing panel was modeled in Abaqus using shell elements, with the spanwise lift distribution applied as an analytical field pressure load. Foam, ribs, and spar were converted to shells for HyperX compatibility while preserving mass and stiffness properties.
 
-{% include image-gallery.html images="cad.png, undeformed.png" height="300" %}
+{% include image-gallery.html images="cad.png, undeformed.png" height="260" %}
 <span style="font-size: 10px">Left: Fusion 360 CAD assembly showing foam sections, ribs, spar, and skin. Right: Undeformed Abaqus shell mesh, full 424mm structural panel.</span>
 
-{% include image-gallery.html images="sf1.png, rf3.png" height="300" %}
+{% include image-gallery.html images="sf1.png, rf3.png" height="260" %}
 <span style="font-size: 10px">Left: SF1 deformed contour, bending load path clearly visible through skin. Right: RF3 (vertical reaction force) distribution at root boundary condition.</span>
 
 A units error in the pressure load definition (N/mm entered instead of N/mm^2) was independently caught and corrected during model verification. Reaction forces had been 15-20x too high, which triggered the investigation.
