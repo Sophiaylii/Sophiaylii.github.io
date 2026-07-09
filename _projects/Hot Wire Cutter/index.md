@@ -21,15 +21,15 @@ This project became less about the cut itself and more about solving a problem a
 ### Mechanical Rig
 The frame is the backbone of the whole system. It needs to hold the nichrome wire taut and perfectly straight under heat and tension, without warping or drifting mid-cut.
 
-{% include image-gallery.html images="project-hotwire/images/rig-1.jpg, project-hotwire/images/rig-2.jpg" height="400" %}
+{% include image-gallery.html images="IMG_4831.HEIC" height="400" %}
  
 ### Wiring and Power
 Getting consistent, controllable heat meant carefully wiring the nichrome wire to a power source, with attention to current draw and resistance so the wire stays hot enough to melt foam cleanly without snapping. I settled on a 12V supply, giving enough current through the nichrome wire to melt foam cleanly without risking a burnout.
  
-{% include image-gallery.html images="project-hotwire/images/wiring-1.jpg, project-hotwire/images/wiring-2.jpg" height="400" %}
+{% include image-gallery.html images="IMG_4834.HEIC, IMG_4835.HEIC, IMG_4836.HEIC" height="400" %}
  
 ### Complete Setup
-{% include image-gallery.html images="project-hotwire/images/full-setup.jpg" height="400" %}
+{% include image-gallery.html images="IMG_4842.HEIC" height="400" %}
  
 ## Cutting in Action
 Once assembled, the cutter went straight to work shaping foam cores for my wing panel project.
@@ -41,7 +41,7 @@ Once assembled, the cutter went straight to work shaping foam cores for my wing 
 ## The Result
 A clean NACA airfoil profile, cut directly from XPS foam. Ready to serve as the core for the wing panel's composite skin layup.
  
-{% include image-gallery.html images="project-hotwire/images/final-airfoil.jpg" height="400" %}
+{% include image-gallery.html images="IMG_4868.HEIC" height="400" %}
  
 ---
  
