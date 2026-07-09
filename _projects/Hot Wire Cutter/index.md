@@ -8,7 +8,7 @@ skills:
   - Tool and jig design
   - Fabrication tooling
   - Design thinking
-main-image: /project-hotwire/images/main.jpg
+main-image: /IMG_4903.HEIC
 ---
 
 ## Overview
@@ -34,9 +34,7 @@ Getting consistent, controllable heat meant carefully wiring the nichrome wire t
 ## Cutting in Action
 Once assembled, the cutter went straight to work shaping foam cores for my wing panel project.
  
-{% include youtube-video.html id="YOUR_VIDEO_ID_HERE" autoplay="false" %}
- 
-{% include image-gallery.html images="project-hotwire/images/cutting-1.jpg, project-hotwire/images/cutting-2.jpg" height="400" %}
+{% include image-gallery.html images="hotwire_cutting_web.gif" height="400" %}
  
 ## The Result
 A clean NACA airfoil profile, cut directly from XPS foam. Ready to serve as the core for the wing panel's composite skin layup.
