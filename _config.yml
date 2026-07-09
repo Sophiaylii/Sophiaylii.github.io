@@ -16,12 +16,12 @@ name: Sophia Li
 headline: Mechanical Engineering @ Stanford | Aerospace Structures
 description: >- # dont remove this line. this will ignore all new lines until the next section
   Hi! I'm Sophia Li, a Mechanical Engineering student at Stanford focused on aircraft structures, composite materials, and computational engineering. I build 
-  things that fly, then prove they won't break. My work spans the full structural design cycle—from aerodynamic load estimation and first-principles analysis 
+  things that fly, then prove they won't break. My work spans the full structural design cycle, from aerodynamic load estimation and first-principles analysis 
   to finite element simulation, composite sizing, manufacturing, and experimental validation. Long term, I want to design the vehicles that redefine flight. 
   
   <br><br> I enjoy approaching engineering problems from first principles, combining analytical calculations, computational modeling, and physical prototyping. 
   My typical workflow begins with hand calculations, CAD, and analytical models, then progresses to FEA, manufacturing, testing, and iteration.
-  
+
   <br><br> Let's talk! sophiatl [at] stanford [dot] edu
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
