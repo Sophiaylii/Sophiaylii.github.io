@@ -13,11 +13,16 @@ title: Sophia Li's Portfolio # This is what shows up in the tab of the browser
 
 # Hero Section
 name: Sophia Li
-headline: MechE + Aero/Astro at Stanford University
+headline: Mechanical Engineering @ Stanford | Aerospace Structures
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Hi! I'm Sophia Li, an incoming sophomore at Stanford. I build things that fly, then prove they won't break. My work spans the full structural design cycle, 
-  from aero loads, FEA, and composite sizing, to hands-on manufacturing, with an eye toward structures that have to work the first time, every time.
-  Long term, I want to design the vehicles that redefine flight. <br><br> Let's talk! sophiatl [at] stanford [dot] edu
+  Hi! I'm Sophia Li, a Mechanical Engineering student at Stanford focused on aircraft structures, composite materials, and computational engineering. I build 
+  things that fly, then prove they won't break. My work spans the full structural design cycle—from aerodynamic load estimation and first-principles analysis 
+  to finite element simulation, composite sizing, manufacturing, and experimental validation. Long term, I want to design the vehicles that redefine flight. 
+  
+  <br><br> I enjoy approaching engineering problems from first principles, combining analytical calculations, computational modeling, and physical prototyping. 
+  My typical workflow begins with hand calculations, CAD, and analytical models, then progresses to FEA, manufacturing, testing, and iteration.
+  
+  <br><br> Let's talk! sophiatl [at] stanford [dot] edu
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/DSC_0045_cropped.JPG
@@ -45,25 +50,28 @@ external-links:    # input only your own url slug. The icons with missing entrie
 
 # Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
 skills:
+  - category: Engineering Knowledge
+    tools:
+    - Classical Laminate Theory (CLT)
+    - Composite Structures
+    - Structural Analysis
+    - Mechanics of Materials
+    - Failure Criteria
+
   - category: CAD & FEA
     tools:
     - Fusion 360 (Autodesk)
     - Abaqus
     - HyperX
-    - MATLAB
 
   - category: Aerodynamics
     tools:
     - XFLR5
     - Airfoil Analysis
     - Lift Distribution Modeling
-
-  - category: Hardware
-    tools:
-    - Rapid Prototyping
-    - Mechanical Design for Flight
-    
-  - category: Manufacturing
+    - Wing Sizing
+  
+    - category: Manufacturing
     tools:
     - Wet Layup Composite Fabrication
     - 3D Printing
@@ -77,6 +85,13 @@ skills:
     - Python
     - C++
     - MATLAB
+    - NumPy
+    - SciPy
+
+    - category: Mechanical Design
+    tools:
+    - Rapid Prototyping
+    - Mechanical Design for Flight
 
 
 # Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
