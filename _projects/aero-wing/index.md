@@ -48,7 +48,7 @@ Full calculations and justifications are provided in the engineering report, cur
 
 Spanwise lift distribution L'(y) was extracted from XFLR5 for both missions across a range of angles of attack. The 3D panel analysis confirmed Mission 2 governs due to the combined effect of higher speed and aggressive maneuvering. 
 
-{% include image-gallery.html images="xflr1.png, xflr2.png" height="200" %}
+{% include image-gallery.html images="xflr1.png, xflr2.png" height="280" %}
 <span style="font-size: 10px">Left: 2D foil analysis, NACA 2412, Mission 1 vs. Mission 2 comparison. Right: 3D wing panel analysis, Mission 2 at 25 m/s.</span>
 
 A critical units error was identified and corrected during this phase: the raw XFLR5 export was approximately 1000x too large (N/m interpreted as N/mm). After correction, an 11-point spanwise L'(y) table was generated and used as input to all downstream analyses.
@@ -66,7 +66,7 @@ Bending stiffness (EI) was computed analytically in MATLAB using EA-weighted par
 
 This result establishes the hand-calculation baseline that all subsequent FEA models validate against.
 
-{% include image-gallery.html images="ei1.png, ei2.png" height="400" %}
+{% include image-gallery.html images="ei1.png, ei2.jpg" height="400" %}
 <span style="font-size: 10px">MATLAB output confirming skin fraction, 91.33% from 2D FEA validation run (left), and MATLAB theoretical hand calculation (right).</span>
 
 ---
@@ -88,10 +88,10 @@ Result: Skin EI fraction = 91.3% in FEA vs. 93% in MATLAB, agreement within 2%. 
 
 The full 3D wing panel was modeled in Abaqus using shell elements, with the spanwise lift distribution applied as an analytical field pressure load. Foam, ribs, and spar were converted to shells for HyperX compatibility while preserving mass and stiffness properties.
 
-{% include image-gallery.html images="cad.png, undeformed.png" height="360" %}
+{% include image-gallery.html images="cad.png, undeformed.png" height="300" %}
 <span style="font-size: 10px">Left: Fusion 360 CAD assembly showing foam sections, ribs, spar, and skin. Right: Undeformed Abaqus shell mesh, full 424mm structural panel.</span>
 
-{% include image-gallery.html images="sf1.png, rf3.png" height="360" %}
+{% include image-gallery.html images="sf1.png, rf3.png" height="300" %}
 <span style="font-size: 10px">Left: SF1 deformed contour, bending load path clearly visible through skin. Right: RF3 (vertical reaction force) distribution at root boundary condition.</span>
 
 A units error in the pressure load definition (N/mm entered instead of N/mm^2) was independently caught and corrected during model verification. Reaction forces had been 15-20x too high, which triggered the investigation.
