@@ -132,8 +132,6 @@ The panel is structurally adequate under Mission 2 design loads with significant
 
 {% include image-gallery.html images="manufacture.jpg" height="420" %}
 
-*In progress — physical test results to be added upon completion of 3-point bend test.*
-
 The panel was fabricated using wet layup with 210g 2x2 twill 3k TR30S carbon fiber and US Composites 635 thin epoxy , selected for compatibility with the XPS foam core's 74C service temperature limit which ruled out pre-preg processing.
 
 Foam core was cut to NACA 2412 profile using a hot wire foam cutter designed and built specifically for this project. The cutter uses a tensioned nichrome wire with a variable voltage supply, guided by NACA 2412 templates at root and tip stations to produce accurate profile cuts across the full panel span.
@@ -143,6 +141,33 @@ Ribs were hand-cut from balsa (root and tip) and aircraft-grade birch plywood (i
 Skin layup was performed as a wet layup with two plies of CF fabric in 0/90 orientation over the foam core, with the pultruded CF spar tube seated in the core prior to bagging. The panel was cured at room temperature
 
 ---
+
+## Physical Test: Cantilever Whiffletree Loading
+
+The manufactured panel was tested under a cantilever whiffletree-like load configuration to validate the FEA tip deflection prediction. The panel was clamped rigidly at the root, with eight chordwise strings attached at spanwise stations corresponding to the XFLR5 lift distribution. Rice-filled cups were hung at each station loaded to the calculated tributary force, replicating the Mission 2 spanwise lift distribution at design load (total applied load = 15.92 N).
+
+{% include image-gallery.html images="test.jpg" height="420" %}
+<span style="font-size: 10px">Whiffletree test setup</span>
+
+### Results
+
+| Metric | FEA (Abaqus U3) | Measured | Discrepancy |
+|---|---|---|---|
+| Tip deflection | 0.315 mm | 8.0 mm | 25x |
+
+The panel survived the full design load elastically with complete spring-back upon load removal, confirming structural integrity. However, measured tip deflection was approximately 25x greater than the FEA prediction, indicating the panel is significantly more flexible than modeled.
+
+### Discussion
+
+The stiffness discrepancy is attributed to accumulated manufacturing uncertainty rather than a modeling error:
+
+- **Low fiber volume fraction** - Open-air wet layup without vacuum consolidation typically yields a much lower Vf compared to the assumed Vf = 0.50, directly reducing skin modulus.
+- **Fiber discontinuities** - The twill fabric pulled apart during hand layup, creating local gaps and weak zones in the skin.
+- **Resin pooling** - Without vacuum pressure, excess resin pooled at the leading edge radius, leading to inconsistencies in the resin amounts over the wing, increasing mass without proportional stiffness gain.
+- **CF tube and skin property uncertainty** - Spar and skin modulus estimated with no manufacturer datasheet.
+- **Two-part skin issues** - The CF skin was set in two parts, the top and bottom layer instead of one continuous sheet over the entire wing. This created possible zero stress zones at the leading and trailing edge.
+
+The panel passed the structural integrity check, no failure, no permanent deformation, but the stiffness result highlights the sensitivity of composite panel performance to manufacturing quality. A vacuum-bagged layup is the primary recommended improvement for a next iteration, alongside one continuous skin per layer on the wing.
 
 ## Key Independent Catches
 
