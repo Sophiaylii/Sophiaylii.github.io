@@ -194,4 +194,4 @@ Four significant errors were independently identified and corrected during the p
 
 ---
 
-*Full engineering report available below (in progress). Bend test results to follow.*
+*Full engineering report available below (in progress).*
