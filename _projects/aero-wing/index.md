@@ -144,30 +144,69 @@ Skin layup was performed as a wet layup with two plies of CF fabric in 0/90 orie
 
 ## Physical Test: Cantilever Whiffletree Loading
 
-The manufactured panel was tested under a cantilever whiffletree-like load configuration to validate the FEA tip deflection prediction. The panel was clamped rigidly at the root, with eight chordwise strings attached at spanwise stations corresponding to the XFLR5 lift distribution. Rice-filled cups were hung at each station loaded to the calculated tributary force, replicating the Mission 2 spanwise lift distribution at design load (total applied load = 15.92 N).
+The manufactured panel was tested under a cantilever whiffletree load 
+configuration to validate the FEA tip deflection prediction. The panel 
+was clamped rigidly at the root, with nine chordwise strings attached 
+at spanwise stations corresponding to the XFLR5 lift distribution. 
+Rice-filled cups were hung at each station loaded to the calculated 
+tributary force, replicating the Mission 2 spanwise lift distribution 
+at design load (total applied load = 15.92 N).
 
 {% include image-gallery.html images="test.jpg" height="420" %}
-<span style="font-size: 10px">Whiffletree test setup</span>
+<span style="font-size: 10px">Whiffletree test setup: cantilever 
+panel with spanwise distributed loading via tributary-weighted cups 
+at nine stations.</span>
 
 ### Results
 
-| Metric | FEA (Abaqus U3) | Measured | Discrepancy |
+| Metric | FEA (Abaqus U3) | Measured | Ratio |
 |---|---|---|---|
-| Tip deflection | 0.315 mm | 8.0 mm | 25x |
+| Tip deflection | 0.315 mm | ~6 mm | ~19x |
 
-The panel survived the full design load elastically with complete spring-back upon load removal, confirming structural integrity. However, measured tip deflection was approximately 25x greater than the FEA prediction, indicating the panel is significantly more flexible than modeled.
+The panel survived the full design load elastically with complete 
+spring-back upon load removal, confirming structural integrity under 
+Mission 2 design loads.
+
+Initial testing on a flexible surface yielded 8mm tip deflection. Recognizing fixture compliance as an error source, the test was reiterated on a more rigid surface, reducing measured deflection to 6mm. Subsequent observation of root uplift under loading identified rigid body rotation as a remaining unquantified error source, motivating the need for a more controlled fixture in future testing.
 
 ### Discussion
 
-The stiffness discrepancy is attributed to accumulated manufacturing uncertainty rather than a modeling error:
+The measured tip deflection was approximately 19x greater than the 
+FEA prediction. However, two unquantified error sources in the test 
+setup prevent a direct quantitative EI comparison:
 
-- **Low fiber volume fraction** - Open-air wet layup without vacuum consolidation typically yields a much lower Vf compared to the assumed Vf = 0.50, directly reducing skin modulus.
-- **Fiber discontinuities** - The twill fabric pulled apart during hand layup, creating local gaps and weak zones in the skin.
-- **Resin pooling** - Without vacuum pressure, excess resin pooled at the leading edge radius, leading to inconsistencies in the resin amounts over the wing, increasing mass without proportional stiffness gain.
-- **CF tube and skin property uncertainty** - Spar and skin modulus estimated with no manufacturer datasheet.
+- **Root fixture compliance** - the panel could not be clamped 
+  without risk of crushing the root, meaning perfect cantilever 
+  fixity was not achievable. A visible upward displacement at the 
+  root when weights were applied confirmed that rigid body rotation 
+  was occurring at the clamp, greatly contributing to apparent tip deflection 
+  independent of panel bending stiffness. This likely means the panel is stiffer than what was produced during testing.
+- **Table flexibility** - initial tests on a flexible surface were 
+  repeated on a more rigid surface, reducing measured deflection from 
+  8mm to 6mm, confirming fixture compliance was a significant 
+  contributor.
+
+Even after accounting for fixture effects, the panel is likely 
+softer than predicted due to manufacturing variability inherent in 
+open-air wet layup:
+
+- **Low fiber volume fraction** - open-air wet layup without vacuum 
+  consolidation typically yields Vf = 0.25-0.35 vs. the assumed 
+  Vf = 0.50
+- **Fiber discontinuities** - 2x2 twill fabric pulled apart during 
+  hand layup on the curved airfoil surface, introducing local gaps 
+  in the skin
+- **Weave crimp knockdown** - 2x2 twill modulus is approximately 
+  10–15% lower than the UD assumption used in hand calculations
+- **CF tube property uncertainty** - spar modulus estimated via 60% 
+  rule of mixtures with no manufacturer datasheet
 - **Two-part skin issues** - The CF skin was set in two parts, the top and bottom layer instead of one continuous sheet over the entire wing. This created possible zero stress zones at the leading and trailing edge.
 
-The panel passed the structural integrity check, no failure, no permanent deformation, but the stiffness result highlights the sensitivity of composite panel performance to manufacturing quality. A vacuum-bagged layup is the primary recommended improvement for a next iteration, alongside one continuous skin per layer on the wing.
+The test confirmed the panel is structurally sound and behaves 
+elastically at design load. A quantitative stiffness comparison would 
+require a rigid test fixture with proper root potting to eliminate 
+rigid body rotation, and a vacuum-bagged layup to achieve target Vf. 
+Both are identified as next iteration improvements.
 
 ## Key Independent Catches
 
