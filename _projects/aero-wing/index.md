@@ -114,12 +114,12 @@ FEA-extracted shell load resultants were imported into HyperX for composite marg
 
 | Failure Mode | Min MS | Governing Zone |
 |---|---|---|
-| Panel Buckling - Biaxial + TSF | 27.4 | Zone 10 (tip) |
+| Panel Buckling - Biaxial + TSF | 27.4 | Zone 10 |
 | Panel Buckling - Shear + TSF | Very High | - |
-| Panel Buckling - Interaction + TSF | **26.7** | Zone 10 (tip) |
-| Composite, Tsai-Wu | 76.5 | Zone 10 (tip) |
-| Composite, Max Strain 1 | 104 | Zone 10 (tip) |
-| Composite, Tsai-Hill | 79.0 | Zone 10 (tip) |
+| Panel Buckling - Interaction + TSF | **26.7** | Zone 10 |
+| Composite, Tsai-Wu | 76.5 | Zone 10 |
+| Composite, Max Strain 1 | 104 | Zone 10 |
+| Composite, Tsai-Hill | 79.0 | Zone 10 |
 
 **Governing failure mode: Panel buckling under biaxial-shear interaction, MS = 26.7.**
 **Governing strength failure: Tsai-Wu criterion, MS = 76.5.**
@@ -144,7 +144,7 @@ Skin layup was performed as a wet layup with two plies of CF fabric in 0/90 orie
 
 ## Physical Test: Cantilever Whiffletree Loading
 
-The manufactured panel was tested under a cantilever whiffletree load 
+The manufactured panel was tested under a cantilever whiffletree-like load 
 configuration to validate the FEA tip deflection prediction. The panel 
 was clamped rigidly at the root, with nine chordwise strings attached 
 at spanwise stations corresponding to the XFLR5 lift distribution. 
@@ -192,13 +192,13 @@ open-air wet layup:
 
 - **Low fiber volume fraction** - open-air wet layup without vacuum 
   consolidation typically yields Vf = 0.25-0.35 vs. the assumed 
-  Vf = 0.50
+  Vf = 0.60
 - **Fiber discontinuities** - 2x2 twill fabric pulled apart during 
   hand layup on the curved airfoil surface, introducing local gaps 
   in the skin
 - **Weave crimp knockdown** - 2x2 twill modulus is approximately 
   10–15% lower than the UD assumption used in hand calculations
-- **CF tube property uncertainty** - spar modulus estimated via 60% 
+- **CF skin property uncertainty** - skin modulus estimated via 60% 
   rule of mixtures with no manufacturer datasheet
 - **Two-part skin issues** - The CF skin was set in two parts, the top and bottom layer instead of one continuous sheet over the entire wing. This created possible zero stress zones at the leading and trailing edge.
 
